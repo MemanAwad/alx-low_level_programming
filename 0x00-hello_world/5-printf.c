@@ -1,0 +1,11 @@
+#include<stdio.h>
+/**
+ * main - This function will print some text
+ *
+ * Return: this function will return zero to end program
+ */
+int main(void)
+{
+		printf("with proper grammer, but the outcome is a piece of art,");
+		return (0);
+}
