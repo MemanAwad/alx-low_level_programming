@@ -15,8 +15,9 @@
 
 		for (x = 10; x <= 15; x++)
 		{
-		       putchar(x + 'a' - 10);
+			putchar(x + 'a' - 10);
 		}
+
 		putchar('\n');
 		return (0);
 	}
