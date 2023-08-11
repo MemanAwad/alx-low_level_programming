@@ -10,7 +10,7 @@
 
 		while (num < 10)
 		{
-			putchar('0' + num);
+			putchar(num + '0');
 			num++;
 		}
 		printf("\n");
