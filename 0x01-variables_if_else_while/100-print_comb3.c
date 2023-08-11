@@ -8,15 +8,16 @@
 	{
 		int x;
 		int y;
+		int count;
 
 		for (x = 48; x < 58; x++)
 		{
 			for (y = x + 1 ; y < 58; y++)
 			{
-					putchar(x);
-					putchar(y);
-
-				if (x < 57)
+				putchar(x);
+				putchar(y);
+				count++;
+				if (count < 45)
 				{
 					putchar(44);
 					putchar(32);
