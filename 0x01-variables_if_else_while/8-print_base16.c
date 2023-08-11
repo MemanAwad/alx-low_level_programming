@@ -6,13 +6,16 @@
  */
 	int main(void)
 	{
-		char ch = '0';
+		int x;
 
-		while (ch >= 'a')
+	       for(x = 0; x <= 9; x++ )
 		{
-			putchar(ch);
-			ch--;
+			putchar(x + '0');
 		}
-		printf("\n");
+	       for(x = 10; x <=15; x++)
+	       {
+		       putchar(x + 'a'- 10);
+	       }
+		putchar('\n');
 		return (0);
 	}
