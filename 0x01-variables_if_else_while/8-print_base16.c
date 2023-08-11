@@ -8,14 +8,15 @@
 	{
 		int x;
 
-	       for(x = 0; x <= 9; x++ )
+		for (x = 0; x <= 9; x++)
 		{
 			putchar(x + '0');
 		}
-	       for(x = 10; x <=15; x++)
-	       {
-		       putchar(x + 'a'- 10);
-	       }
+
+		for (x = 10; x <= 15; x++)
+		{
+		       putchar(x + 'a' - 10);
+		}
 		putchar('\n');
 		return (0);
 	}
