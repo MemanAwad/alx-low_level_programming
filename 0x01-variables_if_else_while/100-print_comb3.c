@@ -13,11 +13,10 @@
 		{
 			for (y = x + 1 ; y < 58; y++)
 			{
-				if (x != y)
 					putchar(x);
 					putchar(y);
 
-				if (x < 57 && x != y)
+				if (x < 57)
 				{
 					putchar(44);
 					putchar(32);
