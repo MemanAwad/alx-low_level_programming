@@ -1,6 +1,11 @@
 #include <stdio.h>
 
-	int main (void)
+/**
+ * main - this function will print compination of numbers from 0-9
+ * Return: this function will return 0 to end the program
+ */
+
+	int main(void)
 	{
 		int i;
 		int x;
@@ -17,7 +22,6 @@
 					putchar(x);
 					putchar(y);
 					count++;
-				
 					if (count < 120)
 					{
 						putchar(44);
@@ -26,6 +30,6 @@
 				}
 			}
 		}
-		putchar('\n');
-		return(0);
+		putchar ('\n');
+		return (0);
 	}
