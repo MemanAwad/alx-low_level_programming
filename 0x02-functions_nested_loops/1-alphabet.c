@@ -1,15 +1,10 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * main - this function will print text _putchar
- * Return: Always zero
+ * print_alphabet - this function will print text _putchar
+ * Return: void
  */
 
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
 void print_alphabet(void)
 {
 	char ch = 'a';
