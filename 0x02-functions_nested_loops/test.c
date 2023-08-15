@@ -4,19 +4,36 @@
  * main - check the code
  * Return: Always zero
  */
-int _islower(int c);
+int print_sign(int n);
 int main(void)
 {
-	int r;
+	int c;
 
-	r = _islower('H');
-	putchar(r + '0');
+	c = print_sign(3);
+	putchar(c + '0');
 	putchar('\n');
 	return (0);
 }
-int _islower(int c)
-{
-	int var = c;
 
-	return (islower(var));
+int print_sign(int n)
+{
+	int var;
+	if (n > 0)
+	{
+		var = 1;
+		putchar(43);
+		return (var);
+	}
+	else if (n == 0)
+	{
+		var = 0;
+		putchar(48);
+		return (var);
+	}
+	else
+	{
+		var = -1;
+		putchar(45);
+		return (var);
+	}
 }
