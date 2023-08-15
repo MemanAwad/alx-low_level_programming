@@ -12,7 +12,3 @@ int _islower(int c)
 
 	return (islower(var));
 }
-int _putchar(int k)
-{
-	return (putchar(k));
-}
