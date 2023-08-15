@@ -19,12 +19,15 @@ void print_to_98(int n)
 				putchar(',');
 				putchar(' ');
 			}
+			else
+			{
+				putchar(' ');
+			}
 		}
 	}
 	else if (n == 98)
 	{
-		printf("%d", n);
-		putchar(' ');
+		printf("%d ", n);
 	}
 	else 
 	{
@@ -35,6 +38,10 @@ void print_to_98(int n)
 			if (i != 98)
 			{
 				putchar(',');
+				putchar(' ');
+			}
+			else
+			{
 				putchar(' ');
 			}
 		}
