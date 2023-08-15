@@ -10,6 +10,8 @@ int main(void)
 	int c;
 
 	c = print_sign(3);
+	putchar(',');
+	putchar(' ');
 	putchar(c + '0');
 	putchar('\n');
 	return (0);
