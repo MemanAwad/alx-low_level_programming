@@ -1,9 +1,14 @@
 #include <stdio.h>
-#include "main.h"
 /**
- * print_alphabet - this function will print text _putchar
- * Return: void
+ * main - check the code
+ * Return: Always zero
  */
+void print_alphabet_x10(void);
+int main(void)
+{
+	print_alphabet_x10();
+	return (0);
+}
 void print_alphabet_x10(void)
 {
 	int i;
@@ -19,4 +24,3 @@ void print_alphabet_x10(void)
 		putchar('\n');
 	}
 }
-
