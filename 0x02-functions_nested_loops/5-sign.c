@@ -8,8 +8,6 @@
  */
 int print_sign(int n)
 {
-	int var;
-
 	if (n > 0)
 	{
 		var = 1;
