@@ -9,7 +9,7 @@
 int _islower(int c)
 {
 	int var;
-	
+
 	if (islower(c) != 0)
 	{
 		var = 1;
