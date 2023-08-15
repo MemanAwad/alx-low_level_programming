@@ -1,26 +1,22 @@
 #include <stdio.h>
+#include <ctype.h>
 /**
  * main - check the code
  * Return: Always zero
  */
-void print_alphabet_x10(void);
+int _islower(int c);
 int main(void)
 {
-	print_alphabet_x10();
+	int r;
+
+	r = _islower('H');
+	putchar(r + '0');
+	putchar('\n');
 	return (0);
 }
-void print_alphabet_x10(void)
+int _islower(int c)
 {
-	int i;
+	int var = c;
 
-	for (i = 0; i < 10; i++)
-	{
-		char ch = 'a';
-		while (ch <= 'z')
-		{
-			putchar(ch);
-			ch++;
-		}
-		putchar('\n');
-	}
+	return (islower(var));
 }
