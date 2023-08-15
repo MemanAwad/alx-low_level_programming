@@ -12,3 +12,7 @@ int _islower(int c)
 
 	return (islower(var));
 }
+int _putchar(int k)
+{
+	 putchar(k);
+}
