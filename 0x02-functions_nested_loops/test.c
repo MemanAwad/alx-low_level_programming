@@ -4,38 +4,45 @@
  * main - check the code
  * Return: Always zero
  */
-int print_sign(int n);
+void print_to_98(int n);
 int main(void)
 {
-	int c;
-
-	c = print_sign(3);
-	putchar(',');
-	putchar(' ');
-	putchar(c + '0');
+	print_to_98(80);
 	putchar('\n');
 	return (0);
 }
 
-int print_sign(int n)
+void print_to_98(int n)
 {
-	int var;
-	if (n > 0)
+	if (n < 98)
 	{
-		var = 1;
-		putchar(43);
-		return (var);
+		int i;
+		for (i = n; i <= 98; i++)
+		{
+			printf("%d", i);
+			if (i != 98)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+		}
 	}
-	else if (n == 0)
+	else if (n == 98)
 	{
-		var = 0;
-		putchar(48);
-		return (var);
+		printf("%d", n);
+		putchar(' ');
 	}
-	else
+	else 
 	{
-		var = -1;
-		putchar(45);
-		return (var);
+		int i;
+		for (i = n; i >= 98; i--)
+		{
+			printf("%d", i);
+			if (i != 98)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+		}
 	}
 }
