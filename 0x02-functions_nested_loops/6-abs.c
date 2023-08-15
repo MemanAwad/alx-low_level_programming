@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * print_sign - check if the input is positive or negative or 0
- * @n: it is the input to check
- * Return: 0 or 1
+ * _abs - return the absulute value of the input
+ * @name: it is the input to give its absoulute value
+ * Return: positive intiger
  */
 
 int _abs(int name)
