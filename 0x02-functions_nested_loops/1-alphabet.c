@@ -1,9 +1,9 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * main - this function will print text _putchar
  * Return: Always zero
  */
-void print_alphabet(void);
 
 int main(void)
 {
