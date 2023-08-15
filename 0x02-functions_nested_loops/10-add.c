@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * print_last_digit - return the last digit of input number
- * @digit: it is the input to give its absoulute value
+ * add - return the sum of two numbers
+ * @x : first num
+ * @y : second num
  * Return: integar value
  */
 
