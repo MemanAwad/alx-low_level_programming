@@ -13,24 +13,19 @@ void jack_bauer(void)
 	{
 		int j;
 
-		printf("%d", i);
-
-		for(j = 0; j < 4; j++)
+		for (j = 0; j < 4; j++)
 		{
 			int k;
-
-			printf("%d", j);
-			putchar(':');
 
 			for (k = 0; k < 6; k++)
 			{
 				int m;
 
-				printf("%d", k);
-
-				for (m =0; m < 10; m++)
+				for (m = 0; m < 10; m++)
 				{
-					printf("%d\n", m);
+					printf("%d%d", i, j);
+					putchar(':');
+					printf("%d%d", k, i);
 				}
 			}
 		}
