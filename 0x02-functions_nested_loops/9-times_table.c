@@ -37,11 +37,11 @@ void times_table(void)
 				var = i * j;
 				if (var < 10)
 				{
-						printf(",  %d", var );
+					printf(",  %d", var);
 				}
 				else
 				{
-						printf(", %d", var );
+					printf(", %d", var);
 				}
 			}
 		}
