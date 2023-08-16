@@ -12,6 +12,6 @@ int print_last_digit(int digit)
 	int var;
 
 	var = abs(digit%10);
-	printf("%d", var);
+	_putchar(var + '0');
 	return (var);
 }
