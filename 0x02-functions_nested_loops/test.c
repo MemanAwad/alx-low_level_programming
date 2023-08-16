@@ -4,39 +4,66 @@
  * main - check the code
  * Return: Always zero
  */
-void jack_bauer(void);
+void times_table(void);
 int main(void)
 {
-	jack_bauer();
+	times_table();
 	putchar('\n');
 	return (0);
 }
 
-void jack_bauer(void)
+void times_table(void)
 {
 	int i;
+	int zero =0;
 
-	for (i = 0; i < 3; i++)
+	for (i = 0; i < 10; i++)
 	{
 		int j;
+		int var;
 
 		for (j = 0; j < 10; j++)
 		{
-			int k;
-
-			for (k = 0; k < 6; k++)
+			if (i == 0)
 			{
-				int m;
-
-				for (m = 0; m < 10; m++)
+				if (j == 9)
 				{
-						printf("%d%d:%d%d\n", i, j, k, m);
+					printf("%d", i);
+				}
+				else
+				{
+					printf("%d,  ", i);
 				}
 			}
-			if (i ==2 && j ==3)
+			else
 			{
-				break;
+				var = i * j;
+				if (var < 10)
+				{
+					if (j == 9)
+					{
+						printf("%d", var );
+					}
+					else
+					{
+						printf("%d,  ", var );
+					}
+				}
+				else
+				{
+					if (j == 9)
+					{
+						printf("%d", var );
+					}
+					else
+					{
+						printf("%d, ", var );
+					}				
+				}
 			}
 		}
+		if (i == 9)
+			break;
+		printf("\n");
 	}
 }
