@@ -50,7 +50,7 @@ void times_table(void)
 					}
 					else
 					{
-						printf("%d,", var );
+						printf("%d, ", var );
 					}				
 				}
 			}
