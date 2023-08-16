@@ -1,27 +1,21 @@
 #include <stdio.h>
-#include <ctype.h>
+#include <stdlib.h>
+#include "main.h"
 /**
- * main - check the code
- * Return: Always zero
+ * times_table - return the last digit of input number
+ * Return: void
  */
-void times_table(int);
-int main(void)
-{
-	times_table(3);
-	putchar('\n');
-	return (0);
-}
 
-void times_table(int num)
+void print_times_table(int n)
 {
 	int i;
 
-	for (i = 0; i <= num; i++)
+	for (i = 0; i <= n; i++)
 	{
 		int j;
 		int var;
 
-		for (j = 0; j <= num; j++)
+		for (j = 0; j <= n; j++)
 		{
 			if (i == 0)
 			{
@@ -43,16 +37,14 @@ void times_table(int num)
 				var = i * j;
 				if (var < 10)
 				{
-						printf(",  %d", var );
+					printf(",  %d", var);
 				}
 				else
 				{
-						printf(", %d", var );
+					printf(", %d", var);
 				}
 			}
 		}
-		if (i == 9)
-			break;
 		printf("\n");
 	}
 }
