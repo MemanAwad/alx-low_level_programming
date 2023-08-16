@@ -19,7 +19,7 @@ void fibonacci(void)
 	long int x = 1;
 	long int y = 2;
 	long int fib = x + y;
-	long long int sum = 2;
+	long int sum = 2;
 	int i;
 
 	for (i = 0; i < 30; i++)
@@ -32,5 +32,5 @@ void fibonacci(void)
 			sum = sum + fib;
 		}
 	}
-	printf("%lld\n", sum);
+	printf("%ld\n", sum);
 }
