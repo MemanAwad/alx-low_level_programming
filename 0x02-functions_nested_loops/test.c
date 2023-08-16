@@ -15,7 +15,6 @@ int main(void)
 void jack_bauer(void)
 {
 	int i;
-	int count = 0;
 
 	for (i = 0; i < 3; i++)
 	{
@@ -31,15 +30,7 @@ void jack_bauer(void)
 
 				for (m = 0; m < 10; m++)
 				{
-					if (count < 1439)
-					{
 						printf("%d%d:%d%d\n", i, j, k, m);
-					}
-					else
-					{
-						printf("%d%d:%d%d", i, j, k, m);
-					}
-					count++;
 				}
 			}
 			if (i ==2 && j ==3)
