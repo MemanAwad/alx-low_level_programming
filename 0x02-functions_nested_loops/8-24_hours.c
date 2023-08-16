@@ -23,7 +23,7 @@ void jack_bauer(void)
 
 				for (m = 0; m < 10; m++)
 				{
-					printf("%d%d:%d%d", i, j, k, m);
+					printf("%d%d:%d%d\n", i, j, k, m);
 				}
 			}
 		}
