@@ -8,7 +8,6 @@
 void jack_bauer(void)
 {
 	int i;
-	//int count = 0;
 
 	for (i = 0; i < 3; i++)
 	{
@@ -24,16 +23,16 @@ void jack_bauer(void)
 
 				for (m = 0; m < 10; m++)
 				{
-				//	if (count < 1439)
-				//	{
+				/*	if (count < 1439)
+					{ */
 						_putchar(i + '0');
 						_putchar(j + '0');
 						_putchar(':');
 						_putchar(k + '0');
 						_putchar(m + '0');
 						_putchar('\n');
-				//	}
-			/*		else
+				/*	}
+					else
 					{
 						_putchar(i + '0');
 						_putchar(j + '0');
