@@ -26,11 +26,20 @@ void jack_bauer(void)
 				{
 					if (count < 1439)
 					{
-						printf("%d%d:%d%d\n", i, j, k, m);
+						_putchar(i + '0');
+						_putchar(j + '0');
+						_putchar(':');
+						_putchar(k + '0');
+						_putchar(m + '0');
+						_putchar('\n');
 					}
 					else
 					{
-						printf("%d%d:%d%d", i, j, k, m);
+						_putchar(i + '0');
+						_putchar(j + '0');
+						_putchar(':');
+						_putchar(k + '0');
+						_putchar(m + '0');
 					}
 					count++;
 				}
