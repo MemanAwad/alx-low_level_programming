@@ -23,27 +23,15 @@ void jack_bauer(void)
 
 				for (m = 0; m < 10; m++)
 				{
-				/*	if (count < 1439)
-					{ */
-						_putchar(i + '0');
-						_putchar(j + '0');
-						_putchar(':');
-						_putchar(k + '0');
-						_putchar(m + '0');
-						_putchar('\n');
-				/*	}
-					else
-					{
-						_putchar(i + '0');
-						_putchar(j + '0');
-						_putchar(':');
-						_putchar(k + '0');
-						_putchar(m + '0');
-					}
-					count++;*/
+					_putchar(i + '0');
+					_putchar(j + '0');
+					_putchar(':');
+					_putchar(k + '0');
+					_putchar(m + '0');
+					_putchar('\n');
 				}
 			}
-			if (i ==2 && j ==3)
+			if (i == 2 && j == 3)
 			{
 				break;
 			}
