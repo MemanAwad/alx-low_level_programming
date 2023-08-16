@@ -12,5 +12,6 @@ int print_last_digit(int digit)
 	int var;
 
 	var = abs(digit%10);
+	putchar(var + '0');
 	return (var);
 }
