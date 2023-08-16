@@ -16,7 +16,6 @@ int main(void)
  */
 void print_natural(void)
 {
-	int num = 1024;
 	int i;
 	int sum = 0;
 
