@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * times_table - return the last digit of input number
+ * print_times_table - this function prints time table
+ * @n : the size of the time table
  * Return: void
  */
 
