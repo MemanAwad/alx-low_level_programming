@@ -30,7 +30,7 @@ void print_times_table(int n)
 					}
 					else
 					{
-						printf(",  %d", i);
+						printf(",   %d", i);
 					}
 				}
 				else if (j == 0)
@@ -42,11 +42,11 @@ void print_times_table(int n)
 					var = i * j;
 					if (var < 10)
 					{
-						printf(",  %d", var);
+						printf(",   %d", var);
 					}
 					else
 					{
-						printf(", %d", var);
+						printf(",  %d", var);
 					}
 				}
 			}
