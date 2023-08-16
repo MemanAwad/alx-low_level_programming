@@ -54,6 +54,8 @@ void times_table(void)
 					}				
 				}
 			}
-		}
+		if (i == 9)
+			break;
+		printf("\n");
 	}
 }
