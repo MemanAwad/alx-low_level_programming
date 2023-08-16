@@ -4,44 +4,47 @@
  * main - check the code
  * Return: Always zero
  */
-void print_to_98(int n);
+void jack_bauer(void);
 int main(void)
 {
-	print_to_98(80);
+	jack_bauer();
 	putchar('\n');
 	return (0);
 }
 
-void print_to_98(int n)
+void jack_bauer(void)
 {
-	if (n < 98)
+	int i;
+	int count = 0;
+
+	for (i = 0; i < 3; i++)
 	{
-		int i;
-		for (i = n; i <= 98; i++)
+		int j;
+
+		for (j = 0; j < 10; j++)
 		{
-			printf("%d", i);
-			if (i != 98)
+			int k;
+
+			for (k = 0; k < 6; k++)
 			{
-				putchar(',');
-				putchar(' ');
+				int m;
+
+				for (m = 0; m < 10; m++)
+				{
+					if (count < 1439)
+					{
+						printf("%d%d:%d%d\n", i, j, k, m);
+					}
+					else
+					{
+						printf("%d%d:%d%d", i, j, k, m);
+					}
+					count++;
+				}
 			}
-		}
-	}
-	else if (n == 98)
-	{
-		printf("%d", n);
-		putchar(' ');
-	}
-	else 
-	{
-		int i;
-		for (i = n; i >= 98; i--)
-		{
-			printf("%d", i);
-			if (i != 98)
+			if (i ==2 && j ==3)
 			{
-				putchar(',');
-				putchar(' ');
+				break;
 			}
 		}
 	}

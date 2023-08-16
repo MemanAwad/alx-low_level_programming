@@ -8,12 +8,13 @@
 void jack_bauer(void)
 {
 	int i;
+	int count = 0;
 
 	for (i = 0; i < 3; i++)
 	{
 		int j;
 
-		for (j = 0; j < 4; j++)
+		for (j = 0; j < 10; j++)
 		{
 			int k;
 
@@ -23,8 +24,20 @@ void jack_bauer(void)
 
 				for (m = 0; m < 10; m++)
 				{
-					printf("%d%d:%d%d\n", i, j, k, m);
+					if (count < 1439)
+					{
+						printf("%d%d:%d%d\n", i, j, k, m);
+					}
+					else
+					{
+						printf("%d%d:%d%d", i, j, k, m);
+					}
+					count++;
 				}
+			}
+			if (i ==2 && j ==3)
+			{
+				break;
 			}
 		}
 	}
