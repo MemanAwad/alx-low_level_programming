@@ -26,39 +26,29 @@ void times_table(void)
 		{
 			if (i == 0)
 			{
-				if (j == 9)
+				if (j == 0)
 				{
 					printf("%d", i);
 				}
 				else
 				{
-					printf("%d,  ", i);
+					printf(",  %d", i);
 				}
+			}
+			else if (j == 0)
+			{
+				printf("%d", j);
 			}
 			else
 			{
 				var = i * j;
 				if (var < 10)
 				{
-					if (j == 9)
-					{
-						printf("%d", var );
-					}
-					else
-					{
-						printf("%d,  ", var );
-					}
+						printf(",  %d", var );
 				}
 				else
 				{
-					if (j == 9)
-					{
-						printf("%d", var );
-					}
-					else
-					{
-						printf("%d, ", var );
-					}				
+						printf(", %d", var );
 				}
 			}
 		}
