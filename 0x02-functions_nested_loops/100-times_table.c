@@ -44,9 +44,13 @@ void print_times_table(int n)
 					{
 						printf(",   %d", var);
 					}
-					else
+					else if (var < 100)
 					{
 						printf(",  %d", var);
+					}
+					else
+					{
+						printf(", %d", var);
 					}
 				}
 			}
