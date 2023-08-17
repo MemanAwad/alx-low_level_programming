@@ -4,7 +4,10 @@ void print_line(int);
 
 int main(void)
 {
+	print_line(0);
+	print_line(2);
 	print_line(10);
+	print_line(-4);
 	return (0);
 }
 void print_line(int n)
@@ -17,15 +20,15 @@ void print_line(int n)
 	{
 		int i;
 
-		for (i = 1; i <= n; i++)
+		for (i = 0; i < n; i++)
 		{
 			int j;
 
-			for (j = 0; j < i; j++)
+			for (j = 0; j <= i; j++)
 			{
-				putchar(32);
+				putchar(' ');
 			}
-			putchar(92);
+			putchar('\\');
 			putchar('\n');
 		}
 	}
