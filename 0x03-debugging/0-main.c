@@ -7,12 +7,9 @@
 int main(void)
 {
 	int i;
-	int result;
 
 	i = 98
-	result = positive_or_negative(i);
-	printf("%d\n", result);
-
+	positive_or_negative(i);
 	return (0);
 
 }
