@@ -10,6 +10,7 @@ int main(void)
 {
 	fizzbuzz();
 	printf("\n");
+	return (0);
 }
 void fizzbuzz(void)
 {
