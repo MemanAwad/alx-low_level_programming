@@ -1,16 +1,16 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * print_line - this function will print a line
- * @n: the number of dashes
+ * print_diagonal - this function will print a diagonal
+ * @n: the number used to print diagonal
  * Return: void
  *
  */
-void print_line(int n)
+void print_diagonal(int n)
 {
 	if (n == 0 || n < 0)
 	{
-		_putchar('\n');
+		putchar('\n');
 	}
 	else
 	{
@@ -24,8 +24,8 @@ void print_line(int n)
 			{
 				putchar(32);
 			}
-			_putchar(92);
-			_putchar('\n');
+			putchar(92);
+			putchar('\n');
 		}
 	}
 }
