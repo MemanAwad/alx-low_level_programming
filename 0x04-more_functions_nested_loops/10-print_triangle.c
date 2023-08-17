@@ -1,15 +1,11 @@
 #include <stdio.h>
-
-void print_triangle(int);
-
-int main(void)
-{
-	print_triangle(2);
-	print_triangle(10);
-	print_triangle(1);
-	print_triangle(0);
-	return (0);
-}
+#include "main.h"
+/**
+ * print_triangle - this function will print a triangle
+ * @size: the number used to print triangle
+ * Return: void
+ *
+ */
 void print_triangle(int size)
 {
 	if (size == 0 || size < 0)
