@@ -12,7 +12,7 @@ int main(void)
 {
 	int large;
 
-	large =largest_number(978,-98,0);
+	large =largest_number(978,1008,3000);
 	printf("%d is the largest number\n", large);
 	return (0);
 }
