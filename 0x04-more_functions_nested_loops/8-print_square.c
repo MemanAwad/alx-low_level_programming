@@ -1,15 +1,12 @@
 #include <stdio.h>
-
-void print_line(int);
-
-int main(void)
-{
-	print_line(2);
-	print_line(10);
-	print_line(0);
-	return (0);
-}
-void print_line(int n)
+#include "main.h"
+/**
+ * print_square - this function will print a square
+ * @size: the number used to print square
+ * Return: void
+ *
+ */
+void print_square(int size)
 {
 	if (n == 0 || n < 0)
 	{
