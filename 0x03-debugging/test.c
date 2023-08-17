@@ -12,7 +12,7 @@ int main(void)
 {
 	int large;
 
-	large =largest_number(2,5,3);
+	large =largest_number(978,-98,0);
 	printf("%d is the largest number\n", large);
 	return (0);
 }
@@ -20,7 +20,7 @@ int largest_number(int a, int b, int c)
 {
 	int largest;
 
-	if (a > b && b > c)
+	if (a > b && a > c)
 	{
 		largest = a;
 	}
