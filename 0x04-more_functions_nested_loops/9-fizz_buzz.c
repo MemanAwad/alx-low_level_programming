@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * main - this function will call fizzbuzz function
  * Return: always 0
