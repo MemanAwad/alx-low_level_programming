@@ -1,18 +1,18 @@
 #include <stdio.h>
 
-void print_triangle(int);
+void print_diagonal(int);
 
 int main(void)
 {
-	print_triangle(2);
-	print_triangle(10);
-	print_triangle(1);
-	print_triangle(0);
+	print_diagonal(0);
+	print_diagonal(2);
+	print_diagonal(10);
+	print_diagonal(-4);
 	return (0);
 }
-void print_triangle(int size)
+void print_diagonal(int n)
 {
-	if (size == 0 || size < 0)
+	if (n == 0 || n < 0)
 	{
 		putchar('\n');
 	}
@@ -20,19 +20,15 @@ void print_triangle(int size)
 	{
 		int i;
 
-		for (i = 0; i < size; i++)
+		for (i = 0; i < n; i++)
 		{
 			int j;
-			int k;
 
-			for (j = i + 1 ; j < size; j++)
+			for (j = 0; j <= i; j++)
 			{
 				putchar(' ');
 			}
-			for (k = 0; k <= i; k++)
-			{
-				putchar('#');
-			}
+			putchar('\\');
 			putchar('\n');
 		}
 	}
