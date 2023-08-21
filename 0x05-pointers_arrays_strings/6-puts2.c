@@ -14,7 +14,7 @@ void puts2(char *str)
 
 	if (len % 2 == 0)
 	{
-		x = len / 2 ;
+		x = len / 2;
 	}
 	else
 	{
