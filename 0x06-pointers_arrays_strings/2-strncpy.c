@@ -25,7 +25,7 @@ char *_strncpy(char *dest, char *src, int n)
 {
 	int lensrc = len(src);
 
-	if (n >= lensrc || src[lensrc -1] == '\n' )
+	if (n >= lensrc || src[lensrc - 1] == '\n')
 	{
 		int i;
 
