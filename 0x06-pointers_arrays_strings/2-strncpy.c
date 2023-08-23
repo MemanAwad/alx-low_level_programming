@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * len - will return the length of a string
  * @c: the string
@@ -27,7 +26,7 @@ char *_strncpy(char *dest, char *src, int n)
 	int lensrc = len(src);
 	int i;
 
-	if (n <= 0)
+	if (n = 0)
 	{
 		i = 0;
 		dest[i] ='\0';
