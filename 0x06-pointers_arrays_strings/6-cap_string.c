@@ -11,6 +11,10 @@ char *cap_string(char *ch)
 
 	while (ch[i] != '\0')
 	{
+		if (ch[i] == '\t')
+		{
+			ch[i] = ' ';
+		}
 		if (ch[i] == ',' ||
 		ch[i] == ';' ||
 		ch[i] == ' ' ||
