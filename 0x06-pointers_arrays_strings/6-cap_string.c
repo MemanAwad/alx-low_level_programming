@@ -36,7 +36,7 @@ char *cap_string(char *ch)
 				x = ch[i];
 			}
 			ch[i] = x;
-			i++;
+
 		}
 
 	}
