@@ -1,44 +1,28 @@
 #include "main.h"
 /**
- *cap_string - capitalize every word in the string
+ * leet - change specific char with specific int
  * @ch : the string
- * Return: camelcase string
+ * Return: string
  */
-char *cap_string(char *ch)
+char *leet(char *ch)
 {
 	int i = 0;
-	char x;
+	int j;
+	char s1[] = "aAeEoOtTlL";
+	char s2[] = "4433007711";
 
 	while (ch[i] != '\0')
 	{
-		i++;
-		if (ch[i - 1] == ',' ||
-		ch[i - 1] == ';' ||
-		ch[i - 1] == ' ' ||
-		ch[i - 1] == '\n' ||
-		ch[i - 1] == '\t' ||
-		ch[i - 1] == '.' ||
-		ch[i - 1] == '!' ||
-		ch[i - 1] == '?' ||
-		ch[i - 1] == '\"' ||
-		ch[i - 1] == '(' ||
-		ch[i - 1] == ')' ||
-		ch[i - 1] == '{' ||
-		ch[i - 1] == '}' ||
-		i == 0)
+		j = 0;
+		while (s1[j] != '\0')
 		{
-			if ((ch[i] >= 'A' && ch[i] <= 'Z') ||
-			!(ch[i] >= 'a' && ch[i] <= 'z'))
+			if (ch[i] == s1[j])
 			{
-				x = ch[i];
+				ch[i] = s2[j];
 			}
-			else
-			{
-				x = ch[i] - 32;
-			}
-			ch[i] = x;
+			j++;
 		}
-
+		i++;
 	}
 	return (ch);
 }
