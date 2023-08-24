@@ -27,14 +27,13 @@ char *cap_string(char *ch)
 		ch[i - 1] == '}' ||
 		i == 0)
 		{
-			if ((ch[i] >= 'A' && ch[i] <= 'Z') ||
-			!(ch[i] >= 'a' && ch[i] <= 'z'))
+			if (ch[i] >= 'a' && ch[i] <= 'z')
 			{
-				x = ch[i];
+				x = ch[i] - 32;
 			}
 			else
 			{
-				x = ch[i] - 32;
+				x = ch[i];
 			}
 			ch[i] = x;
 		}
