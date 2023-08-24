@@ -23,25 +23,16 @@ int len(char *c)
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int lensrc = len(src);
-	int i;
 
-	if (n > lensrc || src[n] == '\n')
-	{
-		for (i = 0; i <  lensrc; i++)
-		{
-			dest[i] = src[i];
-		}
-		dest[i] = '\0';
-	}
-	else
-	{
 		int i;
 
 		for (i = 0; i <  n; i++)
 		{
 			dest[i] = src[i];
 		}
-	}
+		while (dest[i] < n)
+		{
+			dest[i] = '\0';
+		}
 	return (dest);
 }
