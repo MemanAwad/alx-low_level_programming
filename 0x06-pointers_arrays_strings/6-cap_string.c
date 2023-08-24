@@ -24,7 +24,8 @@ char *cap_string(char *ch)
 		ch[i - 1] == '(' ||
 		ch[i - 1] == ')' ||
 		ch[i - 1] == '{' ||
-		ch[i - 1] == '}')
+		ch[i - 1] == '}' ||
+		i == 0)
 		{
 			if ((ch[i] >= 'A' && ch[i] <= 'Z') ||
 			!(ch[i] >= 'a' && ch[i] <= 'z'))
