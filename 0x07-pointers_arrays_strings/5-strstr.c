@@ -20,12 +20,8 @@ char *_strstr(char *haystack, char *needle)
 			s1 = haystack;
 			s2 = needle;
 
-			while (*s1 != '\0' && *s2 != '\0')
+			while (*s1 == *s2 && *s1 != '\0' && *s2 != '\0')
 			{
-				if (*s1 != *s2)
-				{
-					break;
-				}
 				s1++;
 				s2++;
 			}
