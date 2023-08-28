@@ -10,7 +10,6 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-	int n;
 
 	while (*s != '\0')
 	{
@@ -18,21 +17,13 @@ char *_strpbrk(char *s, char *accept)
 
 		while (accept[j] != *s && accept[j] != '\0')
 		{
+			if (accept[j] == *s)
+			{
+				return (s);
+			}
 			j++;
-		}
-		if (accept[j] == *s)
-		{
-			n = 1;
-			break;
 		}
 		s++;
 	}
-	if (n > 0)
-	{
-		return (NULL);
-	}
-	else
-	{
-		return (s);
-	}
+	return (NULL);
 }
