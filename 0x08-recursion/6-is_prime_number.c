@@ -1,26 +1,48 @@
 #include "main.h"
+
 /**
- * is_prime - will check if the number is prime
- * @n: the number
- * Return: 0 or 1
+ * iterate - itrate through the giving number
+ * @num: nuber to be iterated
+ * @num2: the second number
+ * Return: integer
  */
-int i = n/2;
-
-int is_prime_number(int n)
+int iterate(int num, int num2)
 {
-
-	if (i == 1)
+	if (num2 == 1)
 	{
 		return (1);
 	}
-
-	else if (n % i == 0)
+	if (num % num2 == 0)
 	{
 		return (0);
 	}
 	else
 	{
-		i--;
-		is_prime(n);
+		return (iterate(num, num2 - 1));
+	}
+}
+/**
+ * is_prime_number - will check if the number is prime
+ * @n: the number
+ * Return: 0 or 1
+ */
+
+int is_prime_number(int n)
+{
+	if (n == 1 || n == -1)
+	{
+		return (0);
+	}
+	else if (n == 2)
+	{
+		return (1);
+	}
+	else
+	{
+		if (n < 0)
+		{
+			n = n * -1;
+		}
+		return (iterate(n, n - 1));
 	}
 }
