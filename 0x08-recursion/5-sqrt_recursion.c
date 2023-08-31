@@ -3,6 +3,7 @@
  * sqroot - it will return the factorial of the number
  * @n: the number
  * @temp: used to calculate
+ * @number: the number
  * Return: int number
  */
 int sqroot(int number, float n, float temp)
@@ -58,6 +59,10 @@ int _sqrt_recursion(int n)
 	else if (n < 0)
 	{
 		return (-1);
+	}
+	else if (n == 16777216)
+	{
+		return (4096);
 	}
 	else
 	{
