@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <ctype.h>
+#include <string.h>
 #include <stdlib.h>
 
 /**
@@ -19,17 +19,21 @@ int main(int argc, char *argv[])
 	{
 		int sum = 0;
 		int i;
+		char *str;
+		int c;
 
 		for (i = 1; i < argc; i++)
 		{
-			int type = atoi(argv[i]);
-
-			if (type == 0)
+			str = argv[i];
+			for (c = 0; c < (int)(strlen(str)); c++)
 			{
-				printf("Error\n");
-				return (0);
+				if (str[c] < 48 || str[c] > 57)
+				{
+					printf("Error\n");
+					return (0);
+				}
 			}
-			sum += atoi(argv[i]);
+			sum += atoi(str);
 		}
 		printf("%d\n", sum);
 	}
