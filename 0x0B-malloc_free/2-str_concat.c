@@ -2,7 +2,7 @@
 #include <string.h>
 #include "main.h"
 /**
- * _str_concat - will concatenate two strings
+ * str_concat - will concatenate two strings
  * @s1: the first string
  * @s2: the second string
  * Return: pointer to string
@@ -24,7 +24,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	len = strlen(s1);
 	len2 = strlen(s2);
-	s = malloc(sizeof(char) * len + sizeof(char) * len2 + 2);
+	s = malloc(sizeof(char) * len + sizeof(char) * len2 + 1);
 	if (s == NULL)
 	{
 		return (NULL);
