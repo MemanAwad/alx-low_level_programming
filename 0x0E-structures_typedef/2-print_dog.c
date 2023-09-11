@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include "dog.h"
 /**
- *  * print_dog - print structure
- *   * @d: the structure
- *    * Return: void
- *     */
+ * print_dog - print structure
+ * @d: the structure
+ * Return: void
+ */
 void print_dog(struct dog *d)
 {
 	char *s = "nil";
@@ -14,22 +14,22 @@ void print_dog(struct dog *d)
 		return;
 	}
 
-	if ((*d).name != NULL)
-	{
-		printf("Name: %s\n", d->name);
-	}
-	else
+	if ((*d).name == NULL)
 	{
 		printf("Name: %s\n", s);
 	}
-	printf("Age: %f\n", d->age);
-	if ((*d).owner != NULL)
+	else
 	{
-		printf("Owner: %s\n", d->owner);
+		printf("Name: %s\n", d->name);
+	}
+	printf("Age: %f\n", d->age);
+	if ((*d).owner == NULL)
+	{
+		printf("Owner: %s\n", s);
 	}
 	else
 	{
-		printf("Owner: %s\n", s);
+		printf("Owner: %s\n", d->owner);
 	}
 
 }
