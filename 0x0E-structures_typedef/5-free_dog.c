@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "dog.h"
 /**
- * print_dog - print structure
+ * free_dog - free structure
  * @d: the structure
  * Return: void
  */
