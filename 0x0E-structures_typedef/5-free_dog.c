@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdlib.h>
 #include "dog.h"
 /**
  * print_dog - print structure
@@ -8,7 +8,6 @@
 void free_dog(dog_t *d)
 {
 	free(d->name);
-	free(d->age);
 	free(d->owner);
 	free(d);
 }
