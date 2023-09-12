@@ -7,7 +7,7 @@
  */
 void print_dog(struct dog *d)
 {
-	char *s = "nil";
+	char *s = "(nil)";
 
 	if (d == NULL)
 	{
