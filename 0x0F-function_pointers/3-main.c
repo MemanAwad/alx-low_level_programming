@@ -6,28 +6,37 @@
  * main - run functions to perform mathmatical operation
  * Return: int
  */
-int main(void)
+int main(int argc, char *argv[])
 {
-	char *str;
-	int (*ptr_get_op_func(char *s))(int, int);
+	int result;
+	int num1;
+	int num2;
+	char *oper;
+	int (*ptr)(int, int);
 
-	scanf("%s", &str);
 
-	if (strlen(str) > 3)
+	if (argc > 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	ptr_get_op_func = get_op_func();
-	if (ptr_get_op_func == NULL)
+	
+	num1 = atoi(argv[1]);
+	oper = argv[2];
+	num2 = atoi(argv[3]);
+
+	ptr = get_op_func(oper);
+	if (ptr == NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	if (0)
+	if (num2 == 0 && (oper[0] == '/' || oper[0] == '%'))
 	{
 		printf("Error\n");
 		exit(100);
 	}
+	result = ptr(num1, num2);
+	printf("%d\n", result);
 	return (0);
 }

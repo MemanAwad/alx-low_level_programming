@@ -1,3 +1,5 @@
+#include "3-calc.h"
+#include <string.h>
 /** 
  * get_op_func - return the right function
  * @s: the operator
@@ -13,15 +15,14 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-	int i;
+	int i = 0;
 
-	while (ops[i][0] != NULL)
+	while (ops[i].op != NULL)
 	{
-		if (*s == op[i][0])
+		if(strcmp(ops[i].op, s) == 0)
 		{
-			return (op[i][i]);
+			return (ops[i].f);
 		}
-		i++;
 	}
 	return (NULL);
 }
