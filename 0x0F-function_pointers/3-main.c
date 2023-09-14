@@ -4,6 +4,8 @@
 
 /**
  * main - run functions to perform mathmatical operation
+ * @argc: number of argument
+ * @argv: array of argument
  * Return: int
  */
 int main(int argc, char *argv[])
@@ -15,12 +17,11 @@ int main(int argc, char *argv[])
 	int (*ptr)(int, int);
 
 
-	if (argc > 4)
+	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	
 	num1 = atoi(argv[1]);
 	oper = argv[2];
 	num2 = atoi(argv[3]);
