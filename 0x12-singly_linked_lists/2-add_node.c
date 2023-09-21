@@ -2,9 +2,10 @@
 #include <stdio.h>
 
 /**
- * list_len - this function will count the lenght of s linked list
- * @h: the head of the linked list
- * Return: number of the node
+ * add node - this function will add node in the beginning of a linked list
+ * @head: the head of the linked list
+ * @str: the string to be stored in the node
+ * Return: pointer to the new node
  */
 
 list_t *add_node(list_t **head, const char *str)
