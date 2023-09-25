@@ -1,5 +1,6 @@
 #include "lists.h"
 #include <stdio.h>
+
 /**
  * print_listint - it will print the linked list ineger value
  * @h: the head of the list
@@ -17,4 +18,3 @@ size_t print_listint(const listint_t *h)
 	}
 	return (total_node);
 }
-
