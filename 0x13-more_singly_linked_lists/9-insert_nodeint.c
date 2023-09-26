@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * sum_listint - function return the sum of all data in listint_t
+ * insert_nodeint_at_index - insert node t hte given index
  * @head: the head of the list
  * @idx: the index to instert the new node in it
  * @n: the value of the new node
