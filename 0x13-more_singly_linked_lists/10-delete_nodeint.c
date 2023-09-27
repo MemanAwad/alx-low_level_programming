@@ -1,5 +1,4 @@
 #include "lists.h"
-
 /**
  * delete_nodeint_at_index - delete node from the given index
  * @head: the head of the list
@@ -9,7 +8,7 @@
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	unsigned int i = 0;
-	unsigned int count;
+	unsigned int count = 0;
 	listint_t *temp = *head;
 	listint_t *temp2;
 
