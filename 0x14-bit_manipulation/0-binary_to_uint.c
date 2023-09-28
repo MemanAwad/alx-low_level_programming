@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * binary_to_unit - this function convert binary number to unsigned int
  * @b: the binary number
@@ -12,10 +11,9 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int result = 0;
 	unsigned int unit = 1;
 	unsigned int len = 0;
-	unsigned int fail = 0;
 
 	if (b == NULL)
-		return (fail);
+		return (0);
 	while (b[i] != '\0')
 	{
 		len++;
@@ -25,13 +23,13 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[i] != '0' && b[i] != '1')
 		{
-			return (fail);
+			return (0);
 		}
 		if (b[i] == '1')
 		{
 			result += unit;
 		}
-		unit = unit*2;
+		unit = unit * 2;
 	}
 	return (result);
 }
