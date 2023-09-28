@@ -12,6 +12,8 @@ int set_bit(unsigned long int *n, unsigned int index)
 	unsigned int status;
 	unsigned int result = *n;
 
+	if (index > 31)
+		return (-1);
 	status = 1 << index;
 	*n = (result & ~status) | (1 << index);
 	return (1);
