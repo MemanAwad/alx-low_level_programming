@@ -10,7 +10,7 @@ void rec(unsigned long int n)
 	int num = n;
 	char c;
 
-	if(num == 0)
+	if (num == 0)
 		return;
 	c = (num & 1) + '0';
 	num >>= 1;
