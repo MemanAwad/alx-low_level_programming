@@ -10,19 +10,21 @@
 int get_bit(unsigned long int n, unsigned int index)
 {
 	int status;
-	/*unsigned int count = 0;
-	int num = n;
-
-	while (num != 0)
-	{
-		num >>= num;
-		count++;
-	}
-
-	if (index > count - 1)
-	{
-		return (-1);
-	}*/
+	/**
+	 * unsigned int count = 0;
+	 *int num = n;
+	 *
+	 *while (num != 0)
+	 *{
+	 *	num >>= num;
+	 *	count++;
+	 *}
+	 *
+	 *if (index > count - 1)
+	 *{
+	 *	return (-1);
+	 *}
+	 */
 	status = (n >> index) & 1;
 	return (status);
 }
