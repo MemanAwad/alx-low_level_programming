@@ -8,6 +8,7 @@ int _strlen(char *str)
 {
 	int count = 0;
 	int i = 0;
+
 	if (str == NULL)
 		return (0);
 	while (str[i] != '\0')
@@ -23,7 +24,7 @@ int _strlen(char *str)
  * @text_content: null terminated string to be written in the file
  * Return: 1 or -1
  */
-int create_file(const char *filename, char *test_content)
+int create_file(const char *filename, char *text_content)
 {
 	int fd;
 	int wr;
@@ -38,7 +39,7 @@ int create_file(const char *filename, char *test_content)
 		return (-1);
 	len = _strlen(test_content);
 	wr = write(fd, test_content, len);
-	if (wr <= 0 )
+	if (wr <= 0)
 		return (-1);
 
 	close(fd);
