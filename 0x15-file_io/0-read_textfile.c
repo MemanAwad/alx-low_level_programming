@@ -17,10 +17,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	fd = open(filename, letters);
-	if (fd < 0 || letters > fd)
+	if (fd == -1)
 		return (0);
 	des = read(fd, buff, letters);
-	if (des < 0)
+	if (des == -1)
 		return (0);
 	write(STDOUT_FILENO, buff, des);
 	free(buff);
