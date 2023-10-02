@@ -1,6 +1,5 @@
 #include "main.h"
-#include <unistd.h>
-#include <fcntl.h>
+
 /**
  * read_textfile - function to read a text file and prints it to the stdout
  * @filename: the name of the file
@@ -11,7 +10,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
 	ssize_t des;
-	char buff[letters];
+	char *buff = malloc(sizeof(char) * letters);
 
 	if (filename == NULL)
 	{
