@@ -8,21 +8,39 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;
+	int fd = 0;
+	int wr = 0;
 	ssize_t des;
-	char *buff = malloc(sizeof(char) * letters);
+	char *buff;
 
-	if (filename == NULL)
+	if (filename == NULL || !letters)
+	{
+		return (0);
+	}
+	buff = malloc(sizeof(char) * letters);
+	if (buff == NULL)
 	{
 		return (0);
 	}
 	fd = open(filename, letters);
 	if (fd == -1)
+	{
+		free(buff);
 		return (0);
+	}
 	des = read(fd, buff, letters);
 	if (des == -1)
+	{
+		free(buff);
 		return (0);
-	write(STDOUT_FILENO, buff, des);
+	}
+	wr = write(STDOUT_FILENO, buff, des);
+	if (wr > 0)
+	{
+		free(buff);
+		return (0);
+	}
 	free(buff);
+	close(fd);
 	return (des);
 }
