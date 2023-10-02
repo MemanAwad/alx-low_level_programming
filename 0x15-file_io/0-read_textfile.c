@@ -23,19 +23,19 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	fd = open(filename, letters);
-	if (fd == -1)
+	if (fd < 0)
 	{
 		free(buff);
 		return (0);
 	}
 	des = read(fd, buff, letters);
-	if (des == -1)
+	if (des < 0)
 	{
 		free(buff);
 		return (0);
 	}
 	wr = write(STDOUT_FILENO, buff, des);
-	if (wr > 0)
+	if (wr <= 0)
 	{
 		free(buff);
 		return (0);
