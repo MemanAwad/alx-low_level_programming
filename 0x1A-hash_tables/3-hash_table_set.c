@@ -22,17 +22,22 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_set->key = strdup(key);
 	new_set->value = strdup(value);
 	new_set->next = NULL;
-	
+
 	index = key_index((const unsigned char *)key, ht->size);
 	current = ht->array[index];
 	if (current == NULL)
 	{
-	       ht->array[index] = new_set;
-	       return (1);
+		ht->array[index] = new_set;
+		return (1);
 	}
 	else
 	{
-		while(current->next != NULL)
+		if (strcmp(current->key, key) == 0)
+		{
+			strcpy(ht->array[index]->value, value);
+			return (1);
+		}
+		while (current->next != NULL)
 		{
 			current = current->next;
 		}
