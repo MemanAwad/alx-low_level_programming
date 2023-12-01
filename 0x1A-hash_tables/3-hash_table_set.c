@@ -37,12 +37,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			strcpy(ht->array[index]->value, value);
 			return (1);
 		}
-		while (current->next != NULL)
+		else
 		{
-			current = current->next;
+			new_set->next = current;
+			ht->array[index] = new_set;
+			return (1);
 		}
-		new_set->next = current;
-		ht->array[index] = new_set;
 	}
-	return (1);
 }
