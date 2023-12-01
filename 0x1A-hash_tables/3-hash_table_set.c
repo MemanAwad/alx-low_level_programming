@@ -15,33 +15,39 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *new_set = NULL;
 	hash_node_t *current = NULL;
 
-	if (key == NULL)
+	if (!ht || strcmp(key, "") == 0 || !key || !value)
 		return (0);
 
 	new_set = malloc(sizeof(hash_node_t));
+	if (!new_set)
+		return (0);
 	new_set->key = strdup(key);
 	new_set->value = strdup(value);
-	new_set->next = NULL;
 
 	index = key_index((const unsigned char *)key, ht->size);
 	current = ht->array[index];
 	if (current == NULL)
 	{
+		new_set->next = NULL;
 		ht->array[index] = new_set;
 		return (1);
 	}
-	else
+	while(current)
 	{
-		if (strcmp(current->key, key) == 0 && current->next == NULL)
-		{
-			strcpy(ht->array[index]->value, value);
-			return (1);
-		}
-		else
-		{
-			new_set->next = current;
-			ht->array[index] = new_set;
-			return (1);
-		}
+		if (strcmp(current->key, key) == 0)
+			break;
+		current = current->next;
 	}
+	if (current)
+	{
+		free(current->value);
+		current->value = malloc(sizeof(char) * strlen(value) + 1);
+		if (!current->value)
+			return (0);
+		strcpy(current->value, value);
+		return (1);
+	}
+	new_set->next = ht->array[index];
+	ht->array[index] = new_set;
+	return (1);
 }
