@@ -12,13 +12,13 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index, i;
-	hash_node_t *new = NULL;
-	char *value_copy;
+	hash_node_t *new_set = NULL;
+	char *cvalue;
 
 	if (!ht || strcmp(key, "") == 0 || !key || !value)
 		return (0);
-	value_copy = strdup(value);
-	if (value_copy == NULL)
+	cvalue = strdup(value);
+	if (cvalue == NULL)
 		return (0);
 
 	index = key_index((const unsigned char *)key, ht->size);
@@ -27,26 +27,26 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		if (strcmp(ht->array[i]->key, key) == 0)
 		{
 			free(ht->array[i]->value);
-			ht->array[i]->value = value_copy;
+			ht->array[i]->value = cvalue;
 			return (1);
 		}
 	}
 
-	new = malloc(sizeof(hash_node_t));
-	if (new == NULL)
+	new_set = malloc(sizeof(hash_node_t));
+	if (new_set == NULL)
 	{
-		free(value_copy);
+		free(cvalue);
 		return (0);
 	}
-	new->key = strdup(key);
-	if (new->key == NULL)
+	new_set->key = strdup(key);
+	if (new_set->key == NULL)
 	{
-		free(new);
+		free(new_set);
 		return (0);
 	}
-	new->value = value_copy;
-	new->next = ht->array[index];
-	ht->array[index] = new;
+	new_set->value = cvalue;
+	new_set->next = ht->array[index];
+	ht->array[index] = new_set;
 
 	return (1);
 }
