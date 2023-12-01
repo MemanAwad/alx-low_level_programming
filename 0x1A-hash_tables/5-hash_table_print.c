@@ -25,13 +25,11 @@ void hash_table_print(const hash_table_t *ht)
 			{
 				if (frist == 0)
 				{
-					printf("\'%s\': \'%s\'", ht->array[i]->key, ht->array[i]->value);
+					printf("\'%s\': \'%s\'", tmp->key, tmp->value);
 					frist = 1;
 				}
 				else
-				{
-					printf(" ,\'%s\': \'%s\'", ht->array[i]->key, ht->array[i]->value);
-				}
+					printf(" ,\'%s\': \'%s\'", tmp->key, tmp->value);
 				tmp = tmp->next;
 			}
 		}
