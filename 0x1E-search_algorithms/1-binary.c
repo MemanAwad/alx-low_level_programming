@@ -1,6 +1,6 @@
 #include "search_algos.h"
 /**
- * linear_search - function that implement the binary search algorithm
+ * binary_search - function that implement the binary search algorithm
  * @array: is a pointer to the first element of the array to search in
  * @size: is the number of elements in array
  * @value: the value to search for
@@ -10,7 +10,7 @@
 int binary_search(int *array, size_t size, int value)
 {
 	size_t i, high, low;
-	
+
 	if (array == NULL || size == 0)
 	{
 		return (-1);
